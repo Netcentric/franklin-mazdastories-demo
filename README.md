@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# Mazda Stories Franklyin Demo
+- Original website: https://mazdastories.com/
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--franklin-mazdastories-demo--netcentric.hlx.page/
+- Live: https://main--franklin-mazdastories-demo--netcentric.hlx.live/
 
 ## Installation
 
