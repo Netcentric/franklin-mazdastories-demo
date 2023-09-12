@@ -17,9 +17,13 @@
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #222;
-  --c-putty-tan: #e5ded4;
+  --text-color: var(--c-dark-grey);
   --navbar-background-color: #2b2b2b;
+  --footer-font-color: var(--c-light-grey);
+  --c-putty-tan: #e5ded4;
+  --c-dark-grey: #222;
+  --c-light-grey: #aaa;
+  --c-solitude-white: #e9ecef;
 
   /* fonts */
   --body-font-family: "mazda type";
@@ -248,6 +252,11 @@ main .section.fullwidth {
   padding: 0;
 }
 
+main .section > div, footer .footer {
+  max-width: 720px;
+  margin: auto;
+}
+
 @media (min-width: 600px) {
   main .section {
     padding: 64px 32px;
@@ -258,6 +267,18 @@ main .section.fullwidth {
   .story-post .section:not(.fullwidth, .hero-container) > div {
     max-width: 50%;
     margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  main .section > div, footer .footer {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .section > div, footer .footer {
+    max-width: 1312px;
   }
 }
 
