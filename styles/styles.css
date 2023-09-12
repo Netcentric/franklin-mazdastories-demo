@@ -12,12 +12,13 @@
 
  :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
+  --link-color: #222;
+  --link-hover-color: #222;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color: #222;
+  --c-putty-tan: #e5ded4;
   --navbar-background-color: #2b2b2b;
 
   /* fonts */
@@ -26,14 +27,15 @@
   --cursive-font-family: quickbrush;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-m: 1.25rem;
+  --body-font-size-s: 1rem;
+  --body-font-size-xs: .85rem;
+  --body-font-size-xxs: .6875rem;
 
   /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 28px;
+  --heading-font-size-xxl: 1.5rem;
+  --heading-font-size-xl: 1.5rem;
+  --heading-font-size-l: 1.5rem;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
@@ -54,9 +56,9 @@
 @media (min-width: 768px) {
   :root {
     /* heading sizes */
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 32px;
+    --heading-font-size-xxl: 2rem;
+    --heading-font-size-xl: 1.5rem;
+    --heading-font-size-l: 1.5rem;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
@@ -67,10 +69,10 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-s);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
@@ -88,9 +90,9 @@ h1, h2, h3,
 h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 0;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
@@ -102,8 +104,8 @@ h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 
 p, dl, ol, ul, pre, blockquote {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 hr {
@@ -136,7 +138,7 @@ main pre {
 
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -242,15 +244,19 @@ main .section {
   padding: 64px 16px;
 }
 
+main .section.fullwidth {
+  padding: 0;
+}
+
 @media (min-width: 600px) {
   main .section {
     padding: 64px 32px;
   }
 }
 
-@media (min-width: 900px) {
-  .section > div {
-    max-width: 1200px;
+@media (min-width: 768px) {
+  .story-post .section:not(.fullwidth, .hero-container) > div {
+    max-width: 50%;
     margin: auto;
   }
 }

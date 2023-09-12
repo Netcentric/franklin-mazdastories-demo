@@ -19,6 +19,30 @@
   display: block;
 }
 
+.columns.bg-putty {
+  background-color: var(--c-putty-tan);
+}
+
+.columns.highlight-box-out {
+  font-size: var(--body-font-size-xs);
+  padding: 4rem 0;
+}
+
+.columns.highlight-box-out div {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.columns.highlight-box-out div p:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .columns.highlight-box-out div > div {
+    flex: 0 0 25%;
+  }
+}
+
 @media (min-width: 900px) {
   .columns > div {
     align-items: center;
