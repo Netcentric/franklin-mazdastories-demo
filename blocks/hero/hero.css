@@ -10,8 +10,11 @@ main .hero-container {
   
 main .hero {
   position: relative;
-  padding: 32px;
+  padding: 10rem 0;
   min-height: 300px;
+  max-height: 750px;
+  text-align: center;
+  color: white;
 }
 
 main .hero h1 {
@@ -36,4 +39,11 @@ main .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  main .hero > div {
+    max-width: 50%;
+    margin: auto;
+  }
 }
