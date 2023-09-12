@@ -20,9 +20,9 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: Mazda Type;
+  --body-font-family: "mazda type";
   --heading-font-family: var(--body-font-family);
-  --cursive-font-family: Quickbrush;
+  --cursive-font-family: quickbrush;
 
   /* body sizes */
   --body-font-size-m: 22px;
