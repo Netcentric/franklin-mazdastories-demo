@@ -245,7 +245,7 @@ main .section {
 }
 
 main .section.fullwidth {
-  padding: 0px;
+  padding: 0;
 }
 
 @media (min-width: 600px) {
