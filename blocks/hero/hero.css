@@ -15,10 +15,21 @@ main .hero {
 }
 
 main .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 145px;
   color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: var(--heading-font-size-l);
+}
+
+main .hero h2 {
+  margin-top: 16px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: var(--body-font-size-xs);
 }
 
 main .hero picture {
