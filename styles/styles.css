@@ -18,6 +18,7 @@
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --navbar-background-color: #2b2b2b;
 
   /* fonts */
   --body-font-family: "mazda type";
@@ -38,7 +39,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 69px;
 
 }
 
@@ -50,14 +51,18 @@
 }
 
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   :root {
+    /* heading sizes */
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
     --heading-font-size-l: 36px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
+
+    /* nav height */
+    --nav-height: 93px;
   }
 }
 
@@ -221,6 +226,11 @@ main img {
   display: inline-block;
   height: 24px;
   width: 24px;
+}
+
+.icon-logo {
+  height: 36px;
+  width: 160px;
 }
 
 .icon svg {
