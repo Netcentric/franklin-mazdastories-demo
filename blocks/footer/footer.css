@@ -30,12 +30,12 @@ footer > div > div > div:nth-child(1) {
   grid-column: 1/3;
 }
 
-footer > div > div > div:nth-child(1) p:first-child {
+footer > div > div > div:nth-child(1) > p:first-child {
   font-size: var(--body-font-size-m);
   margin: .5rem 2rem 3rem 0;
 }
 
-footer > div > div > div:nth-child(1) p:last-child {
+footer > div > div > div:nth-child(1) > p:last-child {
   font-size: var(--body-font-size-xs);
   margin: 0 0 4rem;
 }
@@ -71,7 +71,7 @@ footer > div > div > div:nth-child(3) > ul {
   margin: 0;
 }
 
-footer > div > div > div:nth-child(3) li {
+footer > div > div > div:nth-child(3) > ul > li {
   padding: 1rem;
 }
 
@@ -80,7 +80,7 @@ footer > div > div > div:nth-child(3) li:first-child {
 }
 
 /* section 4: logo */
-footer > div > div > div:nth-child(4) p {
+footer > div > div > div:nth-child(4) > p {
   height: 4rem;
   width: 4rem;
   float: right;
