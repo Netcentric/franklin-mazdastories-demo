@@ -81,7 +81,7 @@ async function loadStories(block, categories, featuredStoryPaths) {
 }
 
 export default async function decorate(block) {
-  loadCSS('/blocks/story-posts/story-cards.css');
+  loadCSS('/blocks/story-cards/story-cards.css');
 
   const config = readBlockConfig(block);
   const categories = config.categories ? config.categories.split(', ') : null;

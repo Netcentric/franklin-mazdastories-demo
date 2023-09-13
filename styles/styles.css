@@ -266,24 +266,24 @@ main .section.fullwidth {
   padding: 0;
 }
 
-main .section > div, footer .footer, .story-posts-container.snapshots-container {
+main .section > div, footer .footer, .story-cards-container.snapshots-container {
   max-width: 720px;
   margin: auto;
 }
 
 /* homepage section with snapshot card + story post component */
 
-.section.story-posts-container.snapshots-container {
+.section.story-cards-container.snapshots-container {
     display: flex;
     column-gap: 4rem;
 }
 
-.section.story-posts-container.snapshots-container div {
+.section.story-cards-container.snapshots-container div {
     flex: 1;
     margin-top: 0;
 }
 
-.section.story-posts-container.snapshots-container .story-cards-container .related-list-item {
+.section.story-cards-container.snapshots-container .story-cards-container .related-list-item {
     width: 100%
 }
 
@@ -299,13 +299,13 @@ main .section > div, footer .footer, .story-posts-container.snapshots-container 
 }
 
 @media (min-width: 992px) {
-  main .section > div, footer .footer, .story-posts-container.snapshots-container {
+  main .section > div, footer .footer, .story-cards-container.snapshots-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  main .section > div, footer .footer, .story-posts-container.snapshots-container {
+  main .section > div, footer .footer, .story-cards-container.snapshots-container {
     max-width: 1312px;
   }
 }
