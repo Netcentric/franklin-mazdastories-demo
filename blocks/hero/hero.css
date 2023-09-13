@@ -17,6 +17,11 @@ main .hero {
   color: white;
 }
 
+main .hero a {
+  color: white;
+  text-decoration: none;
+}
+
 main .hero h1 {
   margin-top: 145px;
   color: white;
