@@ -11,28 +11,37 @@ main .hero-container {
 main .hero {
   position: relative;
   padding: 10rem 0;
-  min-height: 300px;
   max-height: 750px;
   text-align: center;
-  color: white;
 }
 
-main .hero h1 {
-  margin-top: 145px;
-  color: white;
-  text-align: center;
+main .hero.has-media {
+  min-height: 300px;
+}
+
+main .hero.bg-burgundy {
+  background: var(--c-burgundy) linear-gradient(180deg,rgba(0, 0, 0, 0.5),transparent 400px);
+}
+
+main .hero p {
+  margin: 1rem 0 0;
+  color: var(--hero-text-color);
+}
+
+main .hero h1, main .hero h2 {
+  color: var(--hero-text-color);
   text-transform: uppercase;
   letter-spacing: 6px;
-  font-size: var(--heading-font-size-l);
 }
 
 main .hero h2 {
   margin-top: 16px;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-m);
+}
+
+main .hero h2 a {
+  text-decoration: none;
+  color: var(--hero-text-color);
 }
 
 main .hero picture {
