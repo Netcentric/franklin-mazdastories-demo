@@ -8,12 +8,7 @@
 }
 
 .cards > ul > li {
-  border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color)
-}
-
-.cards .cards-card-body {
-  margin: 16px;
 }
 
 .cards .cards-card-image {
@@ -26,6 +21,40 @@
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards.snapshot-featured > ul {
+  grid-template-columns: 1fr;
+}
+
+.cards.snapshot-featured > ul > li {
+  background-color: var(--c-putty-tan);
+  padding: 3rem;
+}
+
+.cards.cards.snapshot-featured h2 {
+  font-family: var(--cursive-font-family);
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.cards.cards.snapshot-featured p:not(.button-container) {
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 2.5rem;
+}
+
+.cards.cards.snapshot-featured .button-container {
+  margin: 0;
+}
+
+.cards.cards.snapshot-featured .button-container a {
+  margin: 0;
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+.cards.cards.snapshot-featured .button-container a:hover {
+  color: white;
 }

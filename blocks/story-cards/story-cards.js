@@ -45,15 +45,6 @@ function addCardsToCardList(cards, cardList) {
   });
 }
 
-export function createCardsList(parent, cards = []) {
-  const blogList = document.createElement('ul');
-  blogList.classList.add('related-list', 'story-cards-container');
-
-  addCardsToCardList(cards, blogList);
-
-  parent.appendChild(blogList);
-}
-
 export async function getStories(category) {
   const response = await fetch(`/${category}/query-index.json`);
   const json = await response.json();
@@ -61,24 +52,46 @@ export async function getStories(category) {
   return queryResult;
 }
 
-async function loadStories(categories) {
-  const storyList = document.querySelector('.story-posts ul');
+export async function getFeaturedStories(storyPath) {
+  const response = await fetch('/query-index.json');
+  const json = await response.json();
+  const queryResult = json.data.filter(((data) => data.path.includes(storyPath)));
+  return queryResult;
+}
 
-  await categories.map(async (category) => {
-    const stories = await getStories(category);
-    addCardsToCardList(stories, storyList);
-  });
+async function loadStories(block, categories, featuredStoryPaths) {
+  const storyList = document.createElement('ul');
+  storyList.classList.add('related-list', 'story-cards-container');
+
+  if (featuredStoryPaths) {
+    await featuredStoryPaths.map(async (storyPath) => {
+      const stories = await getFeaturedStories(storyPath);
+      addCardsToCardList(stories, storyList);
+    });
+  }
+
+  if (categories) {
+    await categories.map(async (category) => {
+      const stories = await getStories(category);
+      addCardsToCardList(stories, storyList);
+    });
+  }
+
+  block.appendChild(storyList);
 }
 
 export default async function decorate(block) {
-  loadCSS('/blocks/story-posts/story-card.css');
+  loadCSS('/blocks/story-cards/story-cards.css');
 
   const config = readBlockConfig(block);
+  const categories = config.categories ? config.categories.split(', ') : null;
+  let featuredStoryPaths = config.featured ? config.featured : null;
 
-  const categories = config.categories.split(', ');
+  if (featuredStoryPaths && !Array.isArray(featuredStoryPaths)) {
+    featuredStoryPaths = featuredStoryPaths.split();
+  }
 
   block.innerHTML = '';
 
-  createCardsList(block);
-  await loadStories(categories);
+  await loadStories(block, categories, featuredStoryPaths);
 }

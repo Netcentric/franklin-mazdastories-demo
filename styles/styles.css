@@ -163,22 +163,26 @@ a:hover {
 /* buttons */
 a.button:any-link, button {
   font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  letter-spacing: .125rem;
+  text-transform: uppercase;
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
+  border: .0625rem solid white;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.1429;
+  padding: 0.9375rem 3.125rem;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
+  color: #fff;
+  background-color: transparent;
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 0.25rem;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -262,9 +266,25 @@ main .section.fullwidth {
   padding: 0;
 }
 
-main .section > div, footer .footer {
+main .section > div, footer .footer, .story-cards-container.snapshots-container {
   max-width: 720px;
   margin: auto;
+}
+
+/* homepage section with snapshot card + story post component */
+
+.section.story-cards-container.snapshots-container {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.section.story-cards-container.snapshots-container div {
+    flex: 1;
+    margin-top: 0;
+}
+
+.section.story-cards-container.snapshots-container .story-cards-container .related-list-item {
+    width: 100%
 }
 
 @media (min-width: 768px) {
@@ -279,13 +299,13 @@ main .section > div, footer .footer {
 }
 
 @media (min-width: 992px) {
-  main .section > div, footer .footer {
+  main .section > div, footer .footer, .story-cards-container.snapshots-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  main .section > div, footer .footer {
+  main .section > div, footer .footer, .story-cards-container.snapshots-container {
     max-width: 1312px;
   }
 }
