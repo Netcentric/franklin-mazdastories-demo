@@ -1,4 +1,4 @@
-.story-posts ul.story-cards-container {
+.story-cards ul.story-cards-container {
   display: flex;
   flex-wrap: wrap;
   padding-inline-start: 0;
