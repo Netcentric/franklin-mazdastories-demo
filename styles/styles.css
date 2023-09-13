@@ -173,7 +173,7 @@ a.button:any-link, button {
   text-align: center;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.14286;
+  line-height: 1.1429;
   padding: 0.9375rem 3.125rem;
   cursor: pointer;
   color: #fff;
@@ -266,6 +266,11 @@ main .section.fullwidth {
   padding: 0;
 }
 
+main .section > div, footer .footer, .story-posts-container.snapshots-container {
+  max-width: 720px;
+  margin: auto;
+}
+
 /* homepage section with snapshot card + story post component */
 
 .section.story-posts-container.snapshots-container {
@@ -280,11 +285,6 @@ main .section.fullwidth {
 
 .section.story-posts-container.snapshots-container .story-cards-container .related-list-item {
     width: 100%
-}
-
-main .section > div, footer .footer, .story-posts-container.snapshots-container {
-  max-width: 720px;
-  margin: auto;
 }
 
 @media (min-width: 768px) {
