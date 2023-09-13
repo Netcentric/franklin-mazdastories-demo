@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/MazdaTypeTT-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/MazdaTypeTT-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
@@ -17,4 +19,5 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/font-fe9ddacd80bca04bc9b8fdb3e1c92106.woff2") format("woff2");
+  font-display: swap;
 }
