@@ -34,6 +34,7 @@ header nav {
 header nav[aria-expanded="true"] {
   overflow-y: auto;
   min-height: 100vh;
+  border-bottom: none
 }
 
 @media (min-width: 768px) {
