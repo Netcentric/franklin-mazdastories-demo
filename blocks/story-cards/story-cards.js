@@ -45,15 +45,6 @@ function addCardsToCardList(cards, cardList) {
   });
 }
 
-export function createCardsList(parent, cards = []) {
-  const blogList = document.createElement('ul');
-  blogList.classList.add('related-list', 'story-cards-container');
-
-  addCardsToCardList(cards, blogList);
-
-  parent.appendChild(blogList);
-}
-
 export async function getStories(category) {
   const response = await fetch(`/${category}/query-index.json`);
   const json = await response.json();
@@ -68,8 +59,9 @@ export async function getFeaturedStories(storyPath) {
   return queryResult;
 }
 
-async function loadStories(categories, featuredStoryPaths) {
-  const storyList = document.querySelector('.story-posts ul');
+async function loadStories(block, categories, featuredStoryPaths) {
+  const storyList = document.createElement('ul');
+  storyList.classList.add('related-list', 'story-cards-container');
 
   if (featuredStoryPaths) {
     await featuredStoryPaths.map(async (storyPath) => {
@@ -84,10 +76,12 @@ async function loadStories(categories, featuredStoryPaths) {
       addCardsToCardList(stories, storyList);
     });
   }
+
+  block.appendChild(storyList);
 }
 
 export default async function decorate(block) {
-  loadCSS('/blocks/story-posts/story-card.css');
+  loadCSS('/blocks/story-posts/story-cards.css');
 
   const config = readBlockConfig(block);
   const categories = config.categories ? config.categories.split(', ') : null;
@@ -99,6 +93,5 @@ export default async function decorate(block) {
 
   block.innerHTML = '';
 
-  createCardsList(block);
-  await loadStories(categories, featuredStoryPaths);
+  await loadStories(block, categories, featuredStoryPaths);
 }
