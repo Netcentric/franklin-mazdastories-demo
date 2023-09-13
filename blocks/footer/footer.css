@@ -2,7 +2,7 @@ footer {
   padding: 2rem 0;
   background-color: var(--c-dark-grey);
   color: var(--footer-font-color);
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-m);
 }
 
 footer .footer p {
@@ -31,12 +31,12 @@ footer > div > div > div:nth-child(1) {
 }
 
 footer > div > div > div:nth-child(1) > p:first-child {
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-l);
   margin: .5rem 2rem 3rem 0;
 }
 
 footer > div > div > div:nth-child(1) > p:last-child {
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-s);
   margin: 0 0 4rem;
 }
 
