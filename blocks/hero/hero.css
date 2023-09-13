@@ -39,7 +39,7 @@ main .hero h2 {
   font-size: var(--body-font-size-m);
 }
 
-main .hero h2 a {
+main .hero a {
   text-decoration: none;
   color: var(--hero-text-color);
 }
