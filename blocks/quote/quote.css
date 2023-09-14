@@ -1,0 +1,24 @@
+main blockquote {
+  text-align: center;
+}
+
+main blockquote p {
+  font-family: var(--cursive-font-family);
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+main blockquote p::after,
+main blockquote p::before {
+  content: "”";
+  line-height: 0;
+}
+
+main blockquote cite {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
+  font-style: normal;
+  margin: 1rem 0 0;
+}
