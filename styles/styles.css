@@ -313,6 +313,18 @@ main .section.image-quote img {
     width: 100%
 }
 
+.story-template .small-text {
+  text-align: center;
+}
+
+.story-template .divider-wrapper + .small-text-wrapper .small-text {
+  margin: 2em 0 0;
+}
+
+.story-template .small-text small {
+  font-size: var(--body-font-size-s);
+}
+
 @media (min-width: 768px) {
   main .section {
     padding: 64px 32px;

@@ -1,21 +1,21 @@
-main blockquote {
+.quote blockquote {
   text-align: center;
 }
 
-main blockquote p {
+.quote blockquote p {
   font-family: var(--cursive-font-family);
   font-size: 2rem;
   line-height: 1.5;
   margin: 0;
 }
 
-main blockquote p::after,
-main blockquote p::before {
+.quote blockquote p::after,
+.quote blockquote p::before {
   content: "”";
   line-height: 0;
 }
 
-main blockquote cite {
+.quote blockquote cite {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: .0625rem;
