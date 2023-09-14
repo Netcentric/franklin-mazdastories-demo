@@ -90,6 +90,10 @@ body {
   display: none;
 }
 
+body .light {
+  color: white;
+}
+
 body.appear {
   display: unset;
 }
