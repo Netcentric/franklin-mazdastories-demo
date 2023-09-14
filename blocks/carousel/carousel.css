@@ -1,0 +1,32 @@
+.section.carousel-container div.carousel-wrapper {
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+  right: 50%;
+  width: 100vw;
+  overflow: hidden;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  gap: 96px;
+  flex-direction: row;
+  padding: 0 calc(50vw - 500px);
+}
+.carousel > div {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.carousel img {
+  width: 1000px;
+  height: 560px;
+  object-fit: cover;
+}
