@@ -6,6 +6,7 @@ main .hero-container > div {
   
 main .hero-container {
   padding: 0;
+  background: linear-gradient(180deg,rgba(0 0 0 / 50%),transparent 400px);
 }
   
 main .hero {
