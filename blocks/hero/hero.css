@@ -67,3 +67,26 @@ main .hero img {
     margin: auto;
   }
 }
+
+/* Heros used within the story content */
+
+main .hero.story-content {
+  min-height: 650px;
+  padding: 0;
+}
+
+main .hero.story-content > div {
+  padding: 4rem;
+}
+
+main .hero.story-content h3 {
+  font-family: var(--cursive-font-family);
+  color: var(--hero-text-color);
+}
+
+main .hero.story-content h2 {
+  font-size: var(--heading-font-size-xxl);
+  text-transform: none;
+  letter-spacing: normal;
+  margin: 2rem 0;
+}
