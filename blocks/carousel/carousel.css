@@ -1,4 +1,9 @@
-.section.carousel-container div.carousel-wrapper {
+.carousel {
+  --carousel-image-width: min(100vw, 1000px);
+  --carousel-gap: 96px;
+}
+
+.carousel-slider-container {
   position: relative;
   left: 50%;
   margin-left: -50vw;
@@ -10,23 +15,73 @@
   width: 100vw;
   overflow: hidden;
 }
-.carousel {
+
+.carousel-slider {
   position: relative;
   display: flex;
-  gap: 96px;
+  gap: var(--carousel-gap);
   flex-direction: row;
-  padding: 0 calc(50vw - 500px);
+  padding: 0 calc(50vw - var(--carousel-image-width) / 2);
+  font-size: 14px;
+  transition: all .3s ease-in-out;
+  transform: translate(calc((var(--carousel-image-width) + var(--carousel-gap)) * var(--carousel-index, 0) * -1));
 }
-.carousel > div {
+
+.carousel-slider > div {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
   text-align: center;
+  width: var(--carousel-image-width);
 }
 
-.carousel img {
-  width: 1000px;
-  height: 560px;
+.carousel-slider img {
+  width: var(--carousel-image-width);
+  aspect-ratio: 1.8;
   object-fit: cover;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-controls button {
+  padding: 44px 20px;
+  transition: all .1s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.carousel-controls button:hover,
+.carousel-controls button:focus {
+  background-color: transparent;
+}
+
+.carousel-controls button:hover{
+  transform: scale(1.1);
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-indicator {
+  --carousel-indicator-width: 30vw;
+
+  width: var(--carousel-indicator-width);
+  height: 2px;
+  background-color: hsla(0deg 0% 77% / 50%);
+}
+
+.carousel-indicator-active {
+  width: calc(var(--carousel-indicator-width) / var(--carousel-length, 2));
+  transform: translate(calc(var(--carousel-indicator-width) / var(--carousel-length, 2) * var(--carousel-index, 0)));
+  height: 2px;
+  background-color: rgba(34 34 34 / 50%);
+  transition: all .3s ease-in-out;
 }
